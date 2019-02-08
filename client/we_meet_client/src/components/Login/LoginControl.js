@@ -5,7 +5,7 @@ import axios from "axios";
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
 import CreateEventForm from '../Events/EventForm'
-import axios from "axios";
+
 
 // signUpHandler
 
