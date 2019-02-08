@@ -22,7 +22,7 @@ describe('Group creation form', () => {
     })
 
     it("and successfully create the group", async () => {
-      await page.click("button[id='create-group']")
+      await page.click("button[id='create-group-form']")
       await page.type('input[name="name"]', 'Group name');
       await page.type('textarea[name="description"]', 'About group text');
       await page.select('select[name="category_id"]', '1');

@@ -22,11 +22,13 @@ describe('Event creation form', () => {
     })
 
     it("and successfully create the event", async () => {
-      await page.click("button[id='event-group']")
+      await page.click("button[id='event-group-form']")
       await page.type('input[name="title"]', 'Event title');
       await page.type('textarea[name="description"]', 'About event text');
       await page.select('select[name="category_id"]', '1');
       await page.type('input[name="location"]', 'Stockholm');
+      await page.type('input[name="date"]', '2019-12-12');
+      await page.type('input[name="time"]', '12:12:12');
       await page.click('input[value="Submit"]')
       await page.waitFor(2000)
       await expect(page).toMatch('Congratulations, your event has been created!')
